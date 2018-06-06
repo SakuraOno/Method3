@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var ue: UITextField!
+    @IBOutlet weak var shita: UITextField!
+    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var add: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +25,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func addbutton(){
+       
+        let kekka = Int(ue.text!)! + Int(shita.text!)!
+        
+        result.text = String(kekka)
+        
+    }
 }
-
