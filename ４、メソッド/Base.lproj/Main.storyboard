@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="計算"/>
                                 <connections>
-                                    <action selector="addbutton" destination="BYZ-38-t0r" eventType="touchUpInside" id="hBA-my-Vry"/>
+                                    <action selector="addbottun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tm4-wb-CDJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDf-d2-vAb">
@@ -52,10 +52,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="add" destination="Coo-lc-CMd" id="Uvs-P3-VQz"/>
-                        <outlet property="result" destination="XDf-d2-vAb" id="uKD-A4-OQd"/>
-                        <outlet property="shita" destination="DgC-8H-hXs" id="oxc-G9-7d5"/>
-                        <outlet property="ue" destination="PGt-PH-wTM" id="68y-15-irw"/>
+                        <outlet property="result" destination="XDf-d2-vAb" id="geJ-ae-Ydx"/>
+                        <outlet property="shita" destination="DgC-8H-hXs" id="xcM-tK-3J6"/>
+                        <outlet property="ue" destination="PGt-PH-wTM" id="0kP-Hj-wJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

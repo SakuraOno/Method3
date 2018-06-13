@@ -13,23 +13,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var ue: UITextField!
     @IBOutlet weak var shita: UITextField!
     @IBOutlet weak var result: UILabel!
-    @IBOutlet weak var add: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func addbutton(){
-       
-        let kekka = Int(ue.text!)! + Int(shita.text!)!
         
-        result.text = String(kekka)
+    @IBAction func addbottun(_ sender: Any) {
         
+    result.text = String(addbutton(ue: ue.text!, shita: shita.text!))
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text == "" {
+            result.isEnabled = false
+        } else {
+            result.isEnabled = true
+        }
+    }
+    
+    func addbutton(ue: String, shita: String) -> Int {
+        var result: Int = 0
+        result = Int(ue)! + Int(shita)!
+        return result
+    }
+    
 }
+
