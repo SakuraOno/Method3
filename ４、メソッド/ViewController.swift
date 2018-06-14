@@ -24,15 +24,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
+    
     @IBAction func addbottun(_ sender: Any) {
         
-    result.text = String(addbutton(ue: ue.text!, shita: shita.text!))
+        result.text = String(addbutton(ue: ue.text!, shita: shita.text!))
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField.text == "" {
-            result.isEnabled = false
+        if ue.text == "" {
+            result.text = "error"
+            
+        } else if shita.text == ""{
+            result.text = "error"
+            
+            
         } else {
             result.isEnabled = true
         }
@@ -44,5 +49,6 @@ class ViewController: UIViewController {
         return result
     }
     
+    
+    
 }
-
