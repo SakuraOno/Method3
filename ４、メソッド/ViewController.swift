@@ -25,30 +25,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addbottun(_ sender: Any) {
-        
+    @IBAction func addbutton() {
+        //この中にif文を書くと落ちる
         result.text = String(addbutton(ue: ue.text!, shita: shita.text!))
+        
     }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if ue.text == "" {
-            result.text = "error"
-            
-        } else if shita.text == ""{
-            result.text = "error"
-            
-            
-        } else {
-            result.isEnabled = true
+        
+        func addbutton(ue: String, shita: String) -> Int {
+            var result: Int = 0
+            //ueか
+            if ue == ""{
+            //shitaか(else ifは複数の条件文が書ける)
+            }else if shita == ""{
+            //その両方が空白の時(&&は”かつ”の演算子)
+            }else if ue == "" && shita == ""{
+                
+            }else{
+                result = Int(ue)! + Int(shita)!
+            }
+            return result
         }
-    }
-    
-    func addbutton(ue: String, shita: String) -> Int {
-        var result: Int = 0
-        result = Int(ue)! + Int(shita)!
-        return result
-    }
-    
-    
-    
+        
+        
 }
+
